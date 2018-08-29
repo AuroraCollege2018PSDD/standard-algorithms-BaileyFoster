@@ -6,41 +6,47 @@ class arrayHandling {
 
 		def menu():
 			WHILE TRUE:
-				Display 500 new line characters
-                		Display "1. Load Numbers"
-                		Display "2. Print the Array"
-                		Display "3. Sum the Array"
-                		Display "4. Maximum of Array"
-                		Display "5. Minimum of Array"
-                		Display"6. Quit"
-
-				get INT choice
+				TRY:
+					Display 500 new line characters
+                			Display "1. Load Numbers"
+                			Display "2. Print the Array"
+                			Display "3. Sum the Array"
+                			Display "4. Maximum of Array"
+                			Display "5. Minimum of Array"
+                			Display"6. Quit"
 	
-				CASEWHERE expression evaluates to
-	
-					1: process Load()
-					2: process Print()
-					3: process Sum()
-					4: process Maximum()
-					5: process Minimum()
-					6: Stop
-					OTHERWISE: REPEAT CASEWHERE
-				ENDCASE
+					get INT choice
+		
+					CASEWHERE expression evaluates to
+		
+						1: process Load()
+						2: process Print()
+						3: process Sum()
+						4: process Maximum()
+						5: process Minimum()
+						6: Stop
+					ENDCASE	
+					
+				EXCEPT:
+					Display "Please Enter an Integer"
 			ENDWHILE
 
 		def Load():
 			WHILE TRUE
-				Display 500 new line characters
-                		Display "Enter \"Menu\" below to return to the menu"
-                		Display "or Enter an integer to be added to the Array"
-				get choice
-				IF choice is "menu"
-					BREAK
-				ENDIF
-				add int(choice) to array
-				IF ValueError
-					REPEAT LOOP
-				ENDIF
+				TRY
+					Display 500 new line characters
+                			Display "Enter \"Menu\" below to return to the menu"
+                			Display "or Enter an integer to be added to the Array"
+					get choice
+					IF choice is "menu"
+						BREAK
+					ENDIF
+					add int(choice) to array
+				EXCEPT
+					Display "PLEASE ENTER AN INTEGER"
+			ENDWHILE
+				
+				
 				
 		def Print():
 			Display 50 new line characters
