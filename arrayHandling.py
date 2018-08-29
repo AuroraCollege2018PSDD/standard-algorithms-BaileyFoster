@@ -71,7 +71,7 @@ class arrayHandling:
         os.system("pause")
 
     def Minimum(self):
-        print("\n"*50)
+        print("\n"*500)
         print("Minimum value was called")
         os.system("pause")
 
