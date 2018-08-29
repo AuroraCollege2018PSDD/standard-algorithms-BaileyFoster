@@ -1,0 +1,69 @@
+class arrayHandling {
+	public -
+		array = list
+		choice = string
+		total = integer
+
+		def menu():
+			WHILE TRUE:
+				Display 500 new line characters
+                		Display "1. Load Numbers"
+                		Display "2. Print the Array"
+                		Display "3. Sum the Array"
+                		Display "4. Maximum of Array"
+                		Display "5. Minimum of Array"
+                		Display"6. Quit"
+
+				get INT choice
+	
+				CASEWHERE expression evaluates to
+	
+					1: process Load()
+					2: process Print()
+					3: process Sum()
+					4: process Maximum()
+					5: process Minimum()
+					6: Stop
+					OTHERWISE: REPEAT CASEWHERE
+				ENDCASE
+			ENDWHILE
+
+		def Load():
+			WHILE TRUE
+				Display 500 new line characters
+                		Display "Enter \"Menu\" below to return to the menu"
+                		Display "or Enter an integer to be added to the Array"
+				get choice
+				IF choice is "menu"
+					BREAK
+				ENDIF
+				add int(choice) to array
+				IF ValueError
+					REPEAT LOOP
+				ENDIF
+				
+		def Print():
+			Display 50 new line characters
+        		Display array
+        		Display "There are " + length of array + " values in the Array"
+
+		def Sum():
+			Display 500 new line characters
+			REPEAT
+				total += current entry in array
+			UNTIL all entries have been processed in array
+			Display "The sum of numbers in the Array is"; total
+			total = 0
+			Display "There are " + length of array + " values in the Array"
+
+		def Maximum():
+			Display 500 new line characters
+			Display "Maximum Value was called"
+
+		def Minimum():
+			Display 500 new line characters
+			Display "Minimum value was called"
+
+Instance = arrayHandling()
+Instance.menu()
+			
